@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get("/", function () {
+    return redirect()->route('admin.index');
+});
+
+Route::prefix("admin")->group(function () {
+    Route::get("", \App\Livewire\Admin\Index::class)->name('admin.index');
+    Route::prefix("products")->group(function () {
+        Route::get("", \App\Livewire\Admin\Products\Index::class)->name('admin.products.index');
+        Route::get("create", \App\Livewire\Admin\Products\Create::class)->name('admin.products.create');
+    });
 });
