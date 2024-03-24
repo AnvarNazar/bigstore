@@ -8,7 +8,6 @@
         <div>
             @error('name') <span>{{ $message }}</span> @enderror
         </div>
-        <input type="text" wire:model="name" max="60"/>
         <button type="submit">Save</button>
     </form>
 </div>
