@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('s_k_u_s', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->softDeletes();
+            $table->string('name', 60)->unique();
         });
     }
 

@@ -23,4 +23,8 @@ Route::prefix("admin")->group(function () {
         Route::get("", \App\Livewire\Admin\Products\Index::class)->name('admin.products.index');
         Route::get("create", \App\Livewire\Admin\Products\Create::class)->name('admin.products.create');
     });
+    Route::prefix("skus")->group(function () {
+        Route::get("", \App\Livewire\Admin\SKU\Index::class)->name('admin.skus.index');
+        Route::get("create", \App\Livewire\Admin\SKU\Create::class)->name('admin.skus.create');
+    });
 });

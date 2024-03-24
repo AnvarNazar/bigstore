@@ -11,6 +11,7 @@
     <nav>
         <a href="{{ route('admin.index') }}" wire:navigate>Dashboard</a>
         <a href="{{ route('admin.products.index') }}" wire:navigate>Products</a>
+        <a href="{{ route('admin.skus.index') }}" wire:navigate>SKUs</a>
     </nav>
 </header>
 {{ $slot }}
